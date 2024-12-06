@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Reset styles */
+  * {
+    @apply box-border m-0 p-0;
+  }
+
+
+  body {
+    font-family: 'Poppins', 'Cairo', sans-serif;
+    @apply bg-white text-black ;
+  }
+
+  :root {
+    --color-red: #f40105;
+    --color-yellow: #f9ba02;
+    --color-green: #36b600;
+  }
+}
+
+@layer components {
+  .container {
+    @apply w-[80%] mx-auto
+  }
+  .sub-container {
+    @apply flex flex-col lg:flex-row gap-4 mb-5
+  }
+
+  .btn {
+    @apply px-14 py-2 rounded-xl border-2 font-bold text-white text-center cursor-pointer transition-all ease-in-out bg-[--color-red] border-transparent;
+  }
+
+  .btn:hover {
+    @apply bg-transparent text-red-600 border-red-600;
+  }
+
+  .heading-2 {
+   @apply text-lg text-gray-400 mb-4
+  }
+
+  .nav-item {
+    @apply hover:text-[--color-red] hover:underline transition-all;
+  }
+
+  .details-header {
+    @apply text-sm text-gray-400 pb-1;
+  }
+
+  .details-subheader {
+    @apply text-[1.1rem] font-medium;
+  }
+
+  .table-header {
+    @apply text-sm font-bold text-gray-500 bg-gray-50 border-b-2;
+  }
+
+  .table-header th {
+    @apply p-5 text-sm font-semibold tracking-wide;
+  }
+
+ .table-row {
+  @apply bg-white;
+}
+
+.table-cell {
+  @apply p-6 text-sm text-gray-700 whitespace-nowrap;
+}
+}
